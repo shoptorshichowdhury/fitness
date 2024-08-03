@@ -723,10 +723,8 @@ option {
     position: relative;
 }
 .client-img{
-    /* width: 100px;
-    height: 130px; */
     width: 35%;
-    height: 60%;
+    height: 30%;
 }
 .quote{
     position: absolute;
@@ -740,6 +738,7 @@ option {
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    border-bottom: 8px solid #E6533C;
 }
 .client p{
     font-size: 14px;
