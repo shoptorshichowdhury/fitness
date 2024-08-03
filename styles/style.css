@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&display=swap');
+
+/*---------------------- shared styles -------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Miama;
+    src: url(../images/fonts/Miama.ttf);
+}
+
+:root {
+    --primary-font: "Inter", sans-serif;
+    --secondary-font: "Miama";
+    --title-font: 3rem;
+    --p-font: 14px;
+    --p-color: #ffffff80;
+    --bg-color: #000;
+    --secondary-bg-color: #222;
+    --primary-color: #E6533C;
+    --secondary-color: #FFF;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+}
+
+.primary-btn {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35rem;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 1rem 2.5rem;
+    border: 1px solid transparent;
+    border-radius: 42px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.banner-btn:hover,
+.primary-btn:hover {
+    background-color: transparent;
+    border-color: var(--secondary-color);
+}
+
+/*------------------------ navbar section styles ---------------------------*/
+
+header {
+    padding-inline: 70px;
+    background: linear-gradient(180deg, #181616 60%, rgba(119, 119, 119, 0.00) 100%);
+    margin-bottom: 100px;
+}
+
+nav {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 3.5rem 2rem;
+}
+
+nav .logo a {
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav .toggle-menu {
+    display: none;
+}
+
+nav .toggle-menu i {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+}
+
+nav .navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 4px;
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 40px;
+}
+
+.navbar li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    padding: 8px 20px;
+    text-align: center;
+    border-radius: 45px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar li a.active,
+.navbar li a:hover {
+    background-color: var(--primary-color);
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 120%;
+    color: var(--secondary-color);
+}
+
+.section-description {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: var(--p-color);
+}
+
+
+
+
+/*---------------------------- hero section styles -------------------------*/
+
+.hero {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 4.85rem;
+    font-weight: 900;
+    line-height: 120%;
+    color: var(--secondary-color);
+    margin-bottom: 1.75rem;
+}
+
+.hero-content h2 span {
+    font-family: var(--secondary-font);
+    font-size: 10rem;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--p-color);
+    margin-bottom: 1.75rem;
+}
+
+.banner-btn {
+    display: none;
+}
+
+.border-btn {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35rem;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-left: 14px;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    border-radius: 42px;
+    transition: all 0.3s ease;
+}
+
+.border-btn:hover {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
+
+.hero-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.workout {
+    position: absolute;
+    top: 23%;
+    right: -23%;
+    width: 194px;
+    padding: 16px 22px;
+    border-radius: 12px;
+    border: 1px solid #ffffff1a;
+    background: #ffffff1a;
+    backdrop-filter: blur(10px);
+}
+
+.workout h4 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.workout p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.tutorial {
+    position: absolute;
+    bottom: 10%;
+    left: -30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 205px;
+    padding: 20px 23px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(48, 48, 48, 0.54);
+    backdrop-filter: blur(10px);
+}
+
+.tutorial .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.tutorial h4 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.tutorial p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: rgba(239, 237, 232, 0.65);
+}
+
+/*-------------------------------- habit section styles ------------------------------*/
+
+.habit {
+    max-width: 85%;
+    margin: 0 auto;
+    padding-inline: 30px;
+    margin-bottom: 100px;
+}
+
+.habit-text {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.habit-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 58px;
+}
+
+.habit-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.habit-img {
+    margin-bottom: 30px;
+
+}
+
+.habit-img img {
+    border-radius: 50%;
+    border: 4px solid #161616;
+    transition: all 0.4s ease;
+}
+
+.habit-img img:hover {
+    transform: translateY(-5px);
+}
+
+.habit-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.habit-card p {
+    max-width: 230px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    color: var(--p-color);
+}
+
+/*-------------------------------- run section styles ------------------------------*/
+.run {
+    padding-inline: 70px;
+    margin-bottom: 100px;
+}
+
+.run-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 30px 30px 30px 50px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 18px;
+}
+
+.run-content {
+    width: 45%;
+    text-align: left;
+}
+
+.run-content .section-description {
+    text-align: left;
+    margin-top: 14px;
+}
+
+.run-btn {
+    padding-inline: 70px;
+    margin-top: 34px;
+    display: block;
+}
+
+.run-img {
+    width: 40%;
+    height: 315px;
+}
+
+.run-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 68% 32%;
+    border-radius: 18px;
+}
+
+/*-------------------------------- training section styles ------------------------------*/
+
+.training {
+    padding-inline: 70px;
+    margin-bottom: 100px;
+}
+
+.training-container {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.training-text {
+    max-width: 65%;
+}
+
+.training-text .section-description {
+    text-align: left;
+    margin-top: 14px;
+}
+
+.exercise-row-1 {
+    margin-top: 58px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.3fr;
+    grid-auto-rows: 200px;
+}
+
+.exercise-row-2 {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1.4fr;
+    grid-auto-rows: 200px;
+}
+.exercise-row-1 span,
+.exercise-row-2 span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+.exercise{
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+.exercise:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+.exercise1 {
+    background-image: url("../images/exercise1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #06FFD280;
+    background-blend-mode: overlay;
+}
+.exercise1 span{
+    color: #000;
+}
+
+.exercise2 {
+    background-image: url("../images/exercise2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FF00004D;
+    background-blend-mode: overlay;
+}
+
+.exercise3 {
+    background-image: url("../images/exercise3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #00000080;
+    background-blend-mode: overlay;
+}
+
+.exercise4 {
+    background-image: url("../images/exercise4.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #00000080;
+    background-blend-mode: overlay;
+}
+
+.exercise5 {
+    background-image: url("../images/exercise5.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #42FF004D;
+    background-blend-mode: overlay;
+}
+
+.exercise6 {
+    background-image: url("../images/exercise6.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0047FF4D;
+    background-blend-mode: overlay;
+}
+
+.exercise1 span,
+.exercise3 span,
+.exercise5 span,
+.exercise6 span{
+    position: absolute;
+    left: 8%;
+    bottom: 15%;
+}
+.exercise2 span{
+    position: absolute;
+    left: 8%;
+    top: 15%;
+}
+.exercise4 span{
+    position: absolute;
+    right: 8%;
+    top: 15%;
+}
+
+
+
+/*-------------------------------- BMI calculator section styles ------------------------------*/
+.bmi {
+    margin-bottom: 100px;
+}
+
+.bmi-text {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.bmi-text .section-description {
+    text-align: left;
+    margin-top: 14px;
+}
+
+.calculator {
+    padding-inline: 70px;
+    padding-block: 52px;
+    margin-top: 88px;
+    background-color: var(--secondary-bg-color);
+}
+
+.calculator-container {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-container {
+    max-width: 50%;
+}
+
+.calculator-title {
+    font-size: 28px;
+    color: var(--secondary-color);
+    font-weight: 900;
+}
+
+.chart-container table {
+    border-collapse: collapse;
+    margin-top: 52px;
+}
+
+.chart-container table th {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 15px 18px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-align: left;
+}
+
+.chart-container table td {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 13px 18px;
+    font-size: 14px;
+    color: var(--p-color);
+}
+
+.calculate-form-container {
+    max-width: 50%;
+}
+
+.calculator-text .section-description {
+    text-align: left;
+    margin-top: 14px;
+}
+
+.form-container {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+input,
+select {
+    width: 100%;
+    display: block;
+    padding: 13px 20px;
+    font-size: 1rem;
+    color: var(--p-color);
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.activity {
+    grid-column: 1 / span 2;
+}
+
+option {
+    background-color: rgb(26, 24, 24);
+    color: var(--p-color);
+}
+
+.calculate-btn .primary-btn {
+    display: block;
+    margin-top: 35px;
+    padding-inline: 70px;
+}
+
+/*-------------------------------- Team section styles ------------------------------*/
+
+.team{
+    padding-inline: 70px;
+    margin-bottom: 100px;
+}
+.team-text{
+    max-width: 50%;
+    margin: 0 auto;
+}
+.team-container{
+    max-width: 85%;
+    margin: 58px auto 0;
+    padding: 20px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 275px;
+    gap: 20px;
+}
+.trainer{
+    border-radius: 18px;
+    background-color: #00000033;
+    background-blend-mode: overlay;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+.trainer:hover{
+    background-color: transparent;
+    transform: translateX(5px);
+}
+
+.trainer span{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.trainer span h4{
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+.trainer span p{
+    font-size: 14px;
+    color: var(--p-color);
+}
+
+.trainer1{
+    background-image: url("../images/trainer1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.trainer2{
+    background-image: url("../images/trainer2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.trainer3{
+    background-image: url("../images/trainer3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.trainer4{
+    background-image: url("../images/trainer4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.trainer5{
+    background-image: url("../images/trainer5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.trainer6{
+    background-image: url("../images/trainer6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*-------------------------------- testimonial section styles ------------------------------*/
+
+.testimonial{
+    padding-inline: 70px;
+    margin-bottom: 100px;
+}
+.testimonial-text{
+    max-width: 50%;
+    margin: 0 auto;
+}
+.testimonial-container{
+    max-width: 85%;
+    margin: 58px auto 0;
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.client{
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--secondary-bg-color);
+    color: #fff;
+    position: relative;
+}
+.client-img{
+    /* width: 100px;
+    height: 130px; */
+    width: 35%;
+    height: 60%;
+}
+.quote{
+    position: absolute;
+    width: 20%;
+    opacity: 80%;
+    top: 0;
+    right: 3%;
+}
+.client-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.client p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--p-color);
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.client-text h4{
+    font-size: 1rem;
+}
+.client-text p{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--p-color);
+}
+.client-review{
+    margin-top: -30px;
+}
+.client-review i{
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+
+
+
+
+
+/*-------------------------------- Footer section styles ------------------------------*/
+footer{
+    padding-block: 65px 35px;
+    padding-inline: 70px;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+.footer-container{
+    max-width: 85%;
+    margin: 0 auto;
+}
+.footer-link-wrapper{
+    display: grid;
+    grid-template-columns: 2.5fr 1.2fr 1.2fr;
+    justify-content: space-between;
+    gap: 50px;
+}
+.col-1 {
+    margin-right: 50px;
+}
+.col-1 .footer-logo a{
+    text-decoration: none;
+    font-size: 70px;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-style: italic;
+}
+.col-1 .section-description{
+    text-align: left;
+    margin-top: 20px;
+}
+.col-2{
+    margin-right: 40px;
+}
+
+.col-2 h4,
+.col-3 h4{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+.col-2 a,
+.col-3 a {
+    display: block;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--p-color);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+.col-2 a:hover,
+.col-3 a:hover{
+    transform: translateX(5px);
+}
+.col-2:last-child,
+.col-3:last-child{
+    margin-bottom: 0px;
+}
+.footer-line{
+    margin-top: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.footer-text{
+    text-align: center;
+    margin-top: 35px;
+    color: var(--p-color);
+    font-size: 20px;
+}

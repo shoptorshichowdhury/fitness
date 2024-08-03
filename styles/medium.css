@@ -1,0 +1,172 @@
+/*------------------------ medium device responsive --------------------*/
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    /*---------------------- shared styles ----------------------*/
+
+    /*------------------ navbar section styles ------------------*/
+    header {
+        padding: 0;
+    }
+
+    nav {
+        max-width: 90%;
+    }
+
+    nav .navbar {
+        gap: 0px;
+        padding: 3px;
+    }
+
+    .navbar li a {
+        font-size: 16px;
+        padding: 8px 18px;
+    }
+
+    /*----------------- hero section styles -------------*/
+    .hero {
+        max-width: 90%;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .banner-btn {
+        display: none;
+    }
+
+    .workout {
+        top: 10%;
+        right: -12%;
+    }
+
+    .tutorial {
+        bottom: 22%;
+        left: -10%;
+    }
+
+    /*------------------- habit section styles ------------*/
+    .habit {
+        padding: 0;
+        max-width: 90%;
+    }
+
+    .habit-text {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .habit-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*------------------- run section styles --------------*/
+    .run {
+        padding: 0;
+    }
+
+    .run-container {
+        max-width: 90%;
+    }
+
+    .run-content .section-title {
+        font-size: 36px;
+    }
+    .run-btn{
+        display: block;
+    }
+    /*------------------- training section styles --------------*/
+    .training{
+        padding: 0;
+    }
+    .training-container{
+        max-width: 90%;
+    }
+    .training-text{
+        max-width: 100%;
+    }
+    .exercise-row-1{
+        grid-template-columns: 1fr 1.3fr 1fr;
+    }
+    .exercise-row-2 {
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+
+    /*------------------- BMI Calculator section styles --------------*/
+    .bmi-text{
+        max-width: 80%;
+        margin: 0 auto;
+        margin-left: 30px;
+    }
+    .calculator{
+        padding-inline: 0;
+    }
+    .calculator-container{
+        max-width: 90%;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .calculate-form-container{
+        max-width: 100%;
+    }
+    .chart-container{
+        max-width: 100%;
+    }
+
+    /*------------------- Team section styles --------------*/
+    .team{
+        padding-inline: 0;
+    }
+    .team-text{
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    .team-container{
+        max-width: 90%;
+    }
+
+    /*------------------- testimonial section styles --------------*/
+    .testimonial {
+        padding-inline: 0;
+    }
+    .testimonial-text{
+        max-width: 80%;
+    }
+    .testimonial-container{
+        max-width: 90%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+   
+    /*------------------- Footer section styles --------------*/
+    footer{
+        padding-inline: 0;
+    }
+    .footer-container{
+        max-width: 90%;
+    }
+    .footer-link-wrapper{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    .col-1{
+        grid-column: 1 /span 4;
+        margin-right: 0;
+        margin-bottom: 80px;
+    }
+    .col-1 p{
+        max-width: 65%;
+    }
+    .col-2{
+        grid-column: span 2;
+        margin-right: 0;
+    }
+    .col-3{
+        grid-column: span 2;
+    }
+    .footer-line{
+        margin-top: 70px;
+    }
+}
