@@ -261,14 +261,9 @@
         padding: 20px;
     }
     .client{
-        border-radius: 18px;
-        padding: 25px;
-        display: flex;
+        padding: 25px 25px 5px 25px;
         flex-direction: column;
         gap: 15px;
-        background-color: var(--secondary-bg-color);
-        color: #fff;
-        position: relative;
     }
     .client p{
         margin-bottom: 8px;
